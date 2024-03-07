@@ -37,7 +37,7 @@ public class LoginPage extends Base {
 	
 	public LoginPage() {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public void clickOnLoginTab() throws InterruptedException {

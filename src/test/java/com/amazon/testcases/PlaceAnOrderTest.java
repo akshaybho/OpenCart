@@ -22,7 +22,8 @@ public class PlaceAnOrderTest extends Base {
     @AfterMethod
     public void tearDown() {
 
-        driver.quit();
+        getDriver().quit();
+
     }
 
     @Test

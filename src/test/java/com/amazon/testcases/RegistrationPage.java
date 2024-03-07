@@ -48,7 +48,7 @@ public class RegistrationPage extends Base {
 	
 	public RegistrationPage() {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public void clickOnRegi() throws InterruptedException {

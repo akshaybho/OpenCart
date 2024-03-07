@@ -13,7 +13,7 @@ public class HomePage extends Base {
 	
 	public HomePage() {
 
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public void searchItem() throws InterruptedException {
@@ -22,7 +22,7 @@ public class HomePage extends Base {
 	}
 	
 	public String getTitle() {
-		return driver.getTitle();
+		return getDriver().getTitle();
 	}
 	
 

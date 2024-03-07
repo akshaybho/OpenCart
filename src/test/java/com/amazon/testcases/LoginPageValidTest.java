@@ -21,7 +21,7 @@ public class LoginPageValidTest extends Base {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		getDriver().quit();
 	}
 	
 	@Test

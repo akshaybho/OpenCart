@@ -18,6 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import com.amazon.actiondriver.Action;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Base {
 	
@@ -28,7 +29,14 @@ public class Base {
 	 *  In thread local, you can set any object and this object will be local and global to the specific thread which is accessing this object.
 	 *   Java ThreadLocal class provides thread-local variables.
 	 */
-	public static WebDriver driver;
+	//public static WebDriver driver;
+
+	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
+
+	public static WebDriver getDriver()
+	{
+		return driver.get();
+	}
 	
 	
 	public void readConfig() {
@@ -53,24 +61,31 @@ public class Base {
 		Base b = new Base();
 		b.readConfig();
 		Action a = new Action();
-		WebDriverManager.chromedriver().setup();
+
 		
 		
 		String browserName = p.getProperty("browser");
 		
 		if(browserName.contains("Chrome")) {
-			driver = new ChromeDriver();		
+			WebDriverManager.chromedriver().setup();
+			//driver = new ChromeDriver();
+
+			driver.set(new ChromeDriver());
 		}
 		else if(browserName.contains("Firefox")) {
-			driver = new FirefoxDriver();
+			WebDriverManager.firefoxdriver().setup();
+			//driver = new FirefoxDriver();
+			driver.set(new FirefoxDriver());
 		}
 		else if(browserName.contains("Edge")) {
-			driver = new EdgeDriver();
+			WebDriverManager.edgedriver().setup();
+			//driver = new EdgeDriver();
+			driver.set(new EdgeDriver());
 		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		a.pageLoadTimeOut(driver, 30);
-		driver.get(p.getProperty("url"));
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		a.pageLoadTimeOut(getDriver(), 30);
+		getDriver().get(p.getProperty("url"));
 	}
 	
 	public static String decodeString(String password) throws IOException {

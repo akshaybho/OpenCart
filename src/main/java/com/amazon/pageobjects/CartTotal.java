@@ -30,7 +30,7 @@ public class CartTotal extends Base {
 	
 	public CartTotal() {
 		
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	public void clickItems() throws InterruptedException {
@@ -54,7 +54,7 @@ public class CartTotal extends Base {
 		 
 		for(int i=1; i<3; i++) {
 			 
-			String itemCost = driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr["+i+"]/td[6]")).getText();
+			String itemCost = getDriver().findElement(By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr["+i+"]/td[6]")).getText();
 			Thread.sleep(3000);
 			String monetaryValue = itemCost;
 			String numericPart = monetaryValue.substring(1);

@@ -104,37 +104,37 @@ public class PlaceAnOrder extends Base {
 
     public PlaceAnOrder()
     {
-        PageFactory.initElements(driver, this);
+        PageFactory.initElements(getDriver(), this);
     }
 
     public void clickOnDesktop()
     {
-        a.click(driver,Desktops);
+        a.click(getDriver(),Desktops);
     }
 
     public void clickOnMac()
     {
 
-        a.click(driver, Mac);
+        a.click(getDriver(), Mac);
     }
 
     public void clickonLaptopAndNotebook()
     {
 
-        a.click(driver, LaptopsAndNotebooks);
+        a.click(getDriver(), LaptopsAndNotebooks);
     }
 
     public void clickOnSony()
     {
 
-        a.click(driver, sonyLaptop);
+        a.click(getDriver(), sonyLaptop);
 
     }
 
     public void clickonAddtoCart()
     {
 
-        a.click(driver, addToCart);
+        a.click(getDriver(), addToCart);
     }
 
     public void getSuccessMessage()
@@ -146,13 +146,13 @@ public class PlaceAnOrder extends Base {
     public void clickOnItemCart()
     {
 
-        a.click(driver, itemsInCart);
+        a.click(getDriver(), itemsInCart);
     }
 
     public void clickOnViewCart()
     {
 
-        a.click(driver, viewCart);
+        a.click(getDriver(), viewCart);
     }
 
    /* public void checkSelectedItem()
@@ -180,23 +180,23 @@ public class PlaceAnOrder extends Base {
     public void getThePageTitle()
     {
 
-        System.out.println(a.getTitle(driver));
+        System.out.println(a.getTitle(getDriver()));
     }
 
     public void clickOnCheckOut()
     {
 
-        a.click(driver, checkOut);
+        a.click(getDriver(), checkOut);
     }
 
     public void selectRadioButton()
     {
-        a.click(driver, guestCheckOut);
+        a.click(getDriver(), guestCheckOut);
     }
 
     public void clickOnGuestContinueButton()
     {
-        a.click(driver, GuestcontinueBtn);
+        a.click(getDriver(), GuestcontinueBtn);
     }
 
     public void personalInfo() throws InterruptedException, IOException {
@@ -222,14 +222,14 @@ public class PlaceAnOrder extends Base {
         // Assuming you've already instantiated the WebDriver instance 'driver'
 
 // Use Select class for dropdown handling
-        Select countryDropdown = new Select(driver.findElement(By.xpath("//select[@name='country_id']")));
+        Select countryDropdown = new Select(getDriver().findElement(By.xpath("//select[@name='country_id']")));
 
 // Selecting by visible text "India"
         countryDropdown.selectByVisibleText("India");
         Thread.sleep(2000);
 
         stateDropDown.click();
-        Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@name='zone_id']")));
+        Select stateDropdown = new Select(getDriver().findElement(By.xpath("//select[@name='zone_id']")));
         stateDropdown.selectByVisibleText("Maharashtra");
 
 
@@ -237,27 +237,27 @@ public class PlaceAnOrder extends Base {
 
     public void clickOnBillingContinueButton()
     {
-        a.click(driver, BillContinueBtn);
+        a.click(getDriver(), BillContinueBtn);
     }
 
     public void clickOnDeliveryContinueButton()
     {
-        a.click(driver, DeliverContinueBtn);
+        a.click(getDriver(), DeliverContinueBtn);
     }
 
     public void checkTermsAndConditions()
     {
-        a.click(driver, checkBox);
+        a.click(getDriver(), checkBox);
     }
 
     public void clickOnPaymentContinueButton()
     {
-        a.click(driver, paymentContinueBtn);
+        a.click(getDriver(), paymentContinueBtn);
     }
 
     public void clickonConfirmOrder()
     {
-        a.click(driver,confirmOrderBtn);
+        a.click(getDriver(),confirmOrderBtn);
 
     }
 

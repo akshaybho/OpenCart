@@ -20,7 +20,8 @@ public class LoginPageTest extends Base {
 	
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+
+		getDriver().quit();
 	}
 	
 	@Test(dataProvider = "credentials")

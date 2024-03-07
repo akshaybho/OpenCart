@@ -12,12 +12,14 @@ public class CartTotalTest extends Base {
 	CartTotal c;
 	@BeforeTest
 	public void setUp() {
+
 		launchApp();
 	}
 	
 	@AfterTest
 	public void tearDown() {
-		driver.quit();
+
+		getDriver().quit();
 	}
 	
 	@Test
