@@ -36,8 +36,9 @@ public class Base {
 		try {
 			p = new Properties();
 			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\Configuration\\Config.properties");
-					
+			FileInputStream inputdet = new FileInputStream(System.getProperty("user.dir")+"\\Configuration\\Details.properties");
 			p.load(input);
+			p.load(inputdet);
 			System.out.println("driver: "+driver);
 		}
 		catch(FileNotFoundException e) {

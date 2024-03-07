@@ -47,6 +47,7 @@ public class RegistrationPage extends Base {
 	WebElement registerText;
 	
 	public RegistrationPage() {
+
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -91,6 +92,7 @@ public class RegistrationPage extends Base {
 		String data = registerText.getText();
 		System.out.println(data);
 	}
+
 
 	
 

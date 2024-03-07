@@ -12,6 +12,7 @@ public class HomePage extends Base {
 	WebElement searchBar;
 	
 	public HomePage() {
+
 		PageFactory.initElements(driver, this);
 	}
 	

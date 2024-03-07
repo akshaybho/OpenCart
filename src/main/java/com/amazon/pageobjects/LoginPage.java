@@ -36,6 +36,7 @@ public class LoginPage extends Base {
 	
 	
 	public LoginPage() {
+
 		PageFactory.initElements(driver, this);
 	}
 	
