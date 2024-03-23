@@ -2,6 +2,8 @@ package com.amazon.pageobjects;
 
 import java.io.IOException;
 
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -33,7 +35,8 @@ public class LoginPage extends Base {
 	
 	@FindBy(css = "div#content h2")
 	WebElement loginText;
-	
+
+
 	
 	public LoginPage() {
 
@@ -41,6 +44,7 @@ public class LoginPage extends Base {
 	}
 	
 	public void clickOnLoginTab() throws InterruptedException {
+
 		accountBtn.click();
 		Thread.sleep(3000);
 		loginTab.click();

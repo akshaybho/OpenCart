@@ -2,14 +2,12 @@ package com.amazon.pageobjects;
 
 import com.amazon.actiondriver.Action;
 import com.amazon.base.Base;
-import com.amazon.utility.Utility;
-import org.apache.poi.xdgf.util.Util;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import java.io.IOException;
 

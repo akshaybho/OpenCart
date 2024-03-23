@@ -15,8 +15,11 @@
     <version>7.7.1</version>
     
 </dependency>
-   
-  <dependency>
+
+
+
+
+        <dependency>
     <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-api</artifactId>
     <version>2.20.0</version>
@@ -92,18 +95,15 @@
 				<artifactId>poi-ooxml-schemas</artifactId>
 				<version>4.1.1</version>
 			</dependency>
-			<dependency>
-				<groupId>SeleniumClass</groupId>
-				<artifactId>Selenium</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.1.5</version>
+            <scope>compile</scope> <!-- or the latest version -->
+        </dependency>
 
-			<dependency>
-				<groupId>Automation_Playwright</groupId>
-				<artifactId>Playwright</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-			</dependency>
-  </dependencies>
+
+    </dependencies>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -125,6 +125,7 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.22.1</version>
+
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

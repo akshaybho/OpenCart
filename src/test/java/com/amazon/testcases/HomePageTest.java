@@ -2,37 +2,43 @@ package com.amazon.testcases;
 
 
 
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+
+import org.testng.annotations.*;
 
 import com.amazon.base.Base;
 import com.amazon.pageobjects.HomePage;
+
+
 
 public class HomePageTest extends Base {
 	HomePage h;
 	@BeforeMethod
 	public void setUp() {
+
 		launchApp();
+		
 	}
 	
 	@AfterMethod
 	public void tearDown() {
-		getDriver().quit();
+
+		quitBrowser();
 	}
 	
 	@Test
-	public void searchItem() throws InterruptedException {
+	public void HomeTest() throws InterruptedException {
+
 		 h = new HomePage();
 		 h.searchItem();
+		 log.info("User clicks on search item");
+		 h.verifyTitle();
+		 log.info("Verifying the title");
+
+		 
+		 
+		 
 	}
 	
-	@Test
-	public void verifyTitle() {
-		String actual = "Your Store";
-		Assert.assertEquals(actual, h.getTitle());
-		
-	}
-
+	
+	
 }

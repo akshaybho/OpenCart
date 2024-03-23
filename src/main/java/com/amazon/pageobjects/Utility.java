@@ -1,4 +1,4 @@
-package com.amazon.utility;
+package com.amazon.pageobjects;
 
 import java.util.Random;
 

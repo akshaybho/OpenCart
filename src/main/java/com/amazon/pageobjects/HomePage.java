@@ -3,8 +3,10 @@ package com.amazon.pageobjects;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.amazon.base.Base;
+
 
 public class HomePage extends Base {
 	
@@ -21,9 +23,15 @@ public class HomePage extends Base {
 		Thread.sleep(3000);
 	}
 	
-	public String getTitle() {
-		return getDriver().getTitle();
+	public void verifyTitle() {
+		 
+		 
+		String expected = "Your Store";
+		Assert.assertEquals(expected, getDriver().getTitle());
+		
+		
+		
 	}
-	
+
 
 }

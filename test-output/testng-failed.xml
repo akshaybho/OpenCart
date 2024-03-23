@@ -1,44 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.amazon.testcases.LoginPageValidTest">
+      <class name="com.amazon.utility.ReadExcel">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="validCredentials"/>
+          <include name="readExcel"/>
         </methods>
-      </class> <!-- com.amazon.testcases.LoginPageValidTest -->
-      <class name="com.amazon.testcases.CartTotalTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="orderItems"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.amazon.testcases.CartTotalTest -->
-      <class name="com.amazon.testcases.HomePageTest">
-        <methods>
-          <include name="searchItem"/>
-          <include name="setUp"/>
-          <include name="verifyTitle"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.amazon.testcases.HomePageTest -->
-      <class name="com.amazon.testcases.RegistrationPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="goToRegister"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.amazon.testcases.RegistrationPageTest -->
-      <class name="com.amazon.testcases.LoginPageTest">
-        <methods>
-          <include name="goToLogin" invocation-numbers="0 1"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.amazon.testcases.LoginPageTest -->
+      </class> <!-- com.amazon.utility.ReadExcel -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

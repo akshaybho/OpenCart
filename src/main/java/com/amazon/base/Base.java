@@ -8,9 +8,14 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+
+
 import org.apache.commons.codec.binary.Base64;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.xml.DOMConfigurator;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,28 +24,39 @@ import com.amazon.actiondriver.Action;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
 
 public class Base {
-	
-	
+
+	public static Logger log;
+
 	public static Properties p;
-	
+
+
 	/*Thread local can be considered as a scope of access like session scope or request scope.
 	 *  In thread local, you can set any object and this object will be local and global to the specific thread which is accessing this object.
 	 *   Java ThreadLocal class provides thread-local variables.
 	 */
 	//public static WebDriver driver;
 
+
 	public static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<RemoteWebDriver>();
 
 	public static WebDriver getDriver()
 	{
+
 		return driver.get();
 	}
+
 	
 	
+
+	@BeforeSuite
 	public void readConfig() {
-		
+
+		DOMConfigurator.configure("log4j 2.xml");
 		try {
 			p = new Properties();
 			FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\Configuration\\Config.properties");
@@ -55,15 +71,17 @@ public class Base {
 		catch(IOException e) {
 			e.printStackTrace();
 		}
-	} 
+	}
+	
 	
 	public static void launchApp() {
 		Base b = new Base();
 		b.readConfig();
 		Action a = new Action();
 
-		
-		
+		 log = LogManager.getLogger("Amazon_1");
+		log.info("Browser is launched");
+
 		String browserName = p.getProperty("browser");
 		
 		if(browserName.contains("Chrome")) {
@@ -98,7 +116,11 @@ public class Base {
 		return (new String(decodedString));
 	}
 
-	
+	public static  void quitBrowser()
+	{
+		log.info("Browser quits");
+		getDriver().quit();
+	}
 	
 	
 

@@ -1,143 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-07T16:42:58 IST" name="Suite" finished-at="2024-03-07T16:45:35 IST" duration-ms="156794">
+  <suite started-at="2024-03-11T16:07:35 IST" name="Default suite" finished-at="2024-03-11T16:07:35 IST" duration-ms="553">
     <groups>
     </groups>
-    <test started-at="2024-03-07T16:42:58 IST" name="Test" finished-at="2024-03-07T16:45:35 IST" duration-ms="156794">
-      <class name="com.amazon.testcases.LoginPageValidTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.LoginPageValidTest@53e211ee]" started-at="2024-03-07T16:44:17 IST" name="setUp" finished-at="2024-03-07T16:44:19 IST" duration-ms="1796" status="PASS">
+    <test started-at="2024-03-11T16:07:35 IST" name="Default test" finished-at="2024-03-11T16:07:35 IST" duration-ms="553">
+      <class name="com.amazon.utility.ReadExcel">
+        <test-method signature="readExcel()[pri:0, instance:com.amazon.utility.ReadExcel@70e9c95d]" started-at="2024-03-11T16:07:35 IST" name="readExcel" finished-at="2024-03-11T16:07:35 IST" duration-ms="522" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validCredentials()[pri:0, instance:com.amazon.testcases.LoginPageValidTest@53e211ee]" started-at="2024-03-07T16:44:19 IST" name="validCredentials" finished-at="2024-03-07T16:44:34 IST" duration-ms="15683" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.LoginPageValidTest@53e211ee]" started-at="2024-03-07T16:44:34 IST" name="tearDown" finished-at="2024-03-07T16:44:34 IST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.testcases.LoginPageValidTest -->
-      <class name="com.amazon.testcases.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.LoginPageTest@6273c5a4]" started-at="2024-03-07T16:43:41 IST" name="setUp" finished-at="2024-03-07T16:43:43 IST" duration-ms="2076" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="goToLogin(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.testcases.LoginPageTest@6273c5a4]" started-at="2024-03-07T16:43:43 IST" name="goToLogin" data-provider="credentials" finished-at="2024-03-07T16:43:55 IST" duration-ms="12660" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[akshay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.LoginPageTest@6273c5a4]" started-at="2024-03-07T16:43:55 IST" name="tearDown" finished-at="2024-03-07T16:43:55 IST" duration-ms="125" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.LoginPageTest@6273c5a4]" started-at="2024-03-07T16:43:55 IST" name="setUp" finished-at="2024-03-07T16:43:57 IST" duration-ms="1702" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="goToLogin(java.lang.String,java.lang.String)[pri:0, instance:com.amazon.testcases.LoginPageTest@6273c5a4]" started-at="2024-03-07T16:43:57 IST" name="goToLogin" data-provider="credentials" finished-at="2024-03-07T16:44:10 IST" duration-ms="12657" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[abc]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[345]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.LoginPageTest@6273c5a4]" started-at="2024-03-07T16:44:10 IST" name="tearDown" finished-at="2024-03-07T16:44:10 IST" duration-ms="144" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.testcases.LoginPageTest -->
-      <class name="com.amazon.testcases.PlaceAnOrderTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.PlaceAnOrderTest@41a90fa8]" started-at="2024-03-07T16:44:34 IST" name="setUp" finished-at="2024-03-07T16:44:36 IST" duration-ms="1595" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="orderAnItem()[pri:0, instance:com.amazon.testcases.PlaceAnOrderTest@41a90fa8]" started-at="2024-03-07T16:44:36 IST" name="orderAnItem" finished-at="2024-03-07T16:45:35 IST" duration-ms="58801" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderAnItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.PlaceAnOrderTest@41a90fa8]" started-at="2024-03-07T16:45:35 IST" name="tearDown" finished-at="2024-03-07T16:45:35 IST" duration-ms="182" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.testcases.PlaceAnOrderTest -->
-      <class name="com.amazon.testcases.CartTotalTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.CartTotalTest@55795845]" started-at="2024-03-07T16:42:58 IST" name="setUp" finished-at="2024-03-07T16:43:01 IST" duration-ms="2763" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="orderItems()[pri:0, instance:com.amazon.testcases.CartTotalTest@55795845]" started-at="2024-03-07T16:43:01 IST" name="orderItems" finished-at="2024-03-07T16:43:17 IST" duration-ms="15607" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderItems -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.CartTotalTest@55795845]" started-at="2024-03-07T16:45:35 IST" name="tearDown" finished-at="2024-03-07T16:45:35 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.testcases.CartTotalTest -->
-      <class name="com.amazon.testcases.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.HomePageTest@5d465e4b]" started-at="2024-03-07T16:44:10 IST" name="setUp" finished-at="2024-03-07T16:44:12 IST" duration-ms="1608" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="searchItem()[pri:0, instance:com.amazon.testcases.HomePageTest@5d465e4b]" started-at="2024-03-07T16:44:12 IST" name="searchItem" finished-at="2024-03-07T16:44:15 IST" duration-ms="3071" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.HomePageTest@5d465e4b]" started-at="2024-03-07T16:44:15 IST" name="tearDown" finished-at="2024-03-07T16:44:15 IST" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.HomePageTest@5d465e4b]" started-at="2024-03-07T16:44:15 IST" name="setUp" finished-at="2024-03-07T16:44:17 IST" duration-ms="1774" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyTitle()[pri:0, instance:com.amazon.testcases.HomePageTest@5d465e4b]" started-at="2024-03-07T16:44:17 IST" name="verifyTitle" finished-at="2024-03-07T16:44:17 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTitle -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.HomePageTest@5d465e4b]" started-at="2024-03-07T16:44:17 IST" name="tearDown" finished-at="2024-03-07T16:44:17 IST" duration-ms="118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.testcases.HomePageTest -->
-      <class name="com.amazon.testcases.RegistrationPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.testcases.RegistrationPageTest@165b8a71]" started-at="2024-03-07T16:43:17 IST" name="setUp" finished-at="2024-03-07T16:43:18 IST" duration-ms="1791" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="goToRegister()[pri:0, instance:com.amazon.testcases.RegistrationPageTest@165b8a71]" started-at="2024-03-07T16:43:18 IST" name="goToRegister" finished-at="2024-03-07T16:43:40 IST" duration-ms="22139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToRegister -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.testcases.RegistrationPageTest@165b8a71]" started-at="2024-03-07T16:43:40 IST" name="tearDown" finished-at="2024-03-07T16:43:41 IST" duration-ms="147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.amazon.testcases.RegistrationPageTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- readExcel -->
+      </class> <!-- com.amazon.utility.ReadExcel -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
